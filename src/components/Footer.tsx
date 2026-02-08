@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { Instagram, Youtube, Twitter, Music2, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Youtube, Twitter, Music2, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -14,11 +15,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Image src="/images/logo-white.svg" alt="KSAFF" width={140} height={56} />
+            <div className="flex items-center gap-3">
+              <Image src="/images/partners/ksaff.png" alt="KSAFF" width={48} height={48} className="rounded-full" />
+              <div className="flex flex-col leading-tight">
+                <span className="text-xl font-black text-white tracking-wide">KSAFF</span>
+                <span className="text-[10px] font-semibold text-white/50 tracking-widest uppercase">Saudi Flag Football</span>
+              </div>
+            </div>
             <p className="text-white/60 text-sm mt-4 leading-relaxed">{t("tagline")}</p>
             <div className="flex gap-3 mt-6">
               {[
-                { icon: Instagram, href: "#" },
+                { icon: Instagram, href: "https://instagram.com/flagfootballksa" },
                 { icon: Twitter, href: "#" },
                 { icon: Youtube, href: "#" },
                 { icon: Music2, href: "#" },
@@ -34,11 +41,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">{t("links")}</h3>
             <ul className="space-y-3">
-              {(["home", "about", "tournaments", "teams", "calendar"] as const).map((key) => (
-                <li key={key}>
-                  <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">{t(key)}</a>
-                </li>
-              ))}
+              {(["home", "about", "tournaments", "teams", "media"] as const).map((key) => {
+                const href = key === "home" ? `/${locale}` : `/${locale}/${key}`;
+                return (
+                  <li key={key}>
+                    <Link href={href} className="text-white/60 hover:text-white transition-colors text-sm">{t(key)}</Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -59,10 +69,12 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">{t("contactUs")}</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/60 text-sm">
-                <Mail className="size-4 flex-shrink-0" /> {t("email")}
+                <Mail className="size-4 flex-shrink-0" />
+                <a href="mailto:flagfootball.ksa@gmail.com" className="hover:text-white transition-colors">{t("email")}</a>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
-                <Phone className="size-4 flex-shrink-0" /> {t("phone")}
+                <Instagram className="size-4 flex-shrink-0" />
+                <a href="https://instagram.com/flagfootballksa" className="hover:text-white transition-colors">{t("instagram")}</a>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <MapPin className="size-4 flex-shrink-0" /> {t("address")}

@@ -8,8 +8,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata = {
-  title: "KSAFF - KSA Flag Football Federation",
-  description: "The official website of the KSA Flag Football Federation. Growing flag football across Saudi Arabia.",
+  title: "KSAFF - KSA Flag Football",
+  description: "Growing flag football across Saudi Arabia.",
 };
 
 export default async function LocaleLayout({

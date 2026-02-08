@@ -14,15 +14,34 @@ export default function JoinCommunity() {
     <section id="about" className="py-24 px-6">
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="bg-gradient-to-br from-[#155724] to-[#0d3a17] rounded-3xl p-10 md:p-14 text-white shadow-2xl relative overflow-hidden">
-            {/* Decorative circles */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/5 rounded-full" />
-            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/5 rounded-full" />
-            <div className="relative z-10">
-              <div className="w-2 h-12 bg-[#86efac] rounded-full mb-6" />
-              <div className="text-sm font-bold text-[#86efac] uppercase tracking-widest mb-2">KSAFF</div>
+          <AnimatedSection variant="scaleIn" delay={0.1}>
+            <div className="bg-gradient-to-br from-[#155724] to-[#0d3a17] rounded-3xl p-10 md:p-14 text-white shadow-2xl relative overflow-hidden min-h-[400px] flex flex-col justify-between">
+              {/* Decorative circles */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/5 rounded-full" />
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/5 rounded-full" />
+              <div className="relative z-10">
+                <div className="text-sm font-bold text-[#86efac] uppercase tracking-widest mb-3">KSAFF</div>
+                <h3 className="text-3xl md:text-4xl font-black leading-tight mb-4">{t("title")}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Join KSA Flag Football and be part of the fastest-growing sport heading to the 2028 Olympics.
+                </p>
+              </div>
+              <div className="relative z-10 flex gap-8 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-black text-[#86efac]">500+</div>
+                  <div className="text-xs text-white/50 mt-1">Players</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-black text-[#86efac]">24</div>
+                  <div className="text-xs text-white/50 mt-1">Teams</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-black text-[#86efac]">6</div>
+                  <div className="text-xs text-white/50 mt-1">Leagues</div>
+                </div>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           <div>
             <AnimatedSection variant="fadeInUp">

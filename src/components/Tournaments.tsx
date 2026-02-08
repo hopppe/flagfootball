@@ -2,15 +2,21 @@
 
 import { useTranslations } from "next-intl";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSection";
-import { Trophy, Users, Star, Sparkles, Shield, Heart } from "lucide-react";
+import { MapPin, Calendar, Sun, GraduationCap } from "lucide-react";
 
-const tournamentIcons = [
-  { key: "open5v5", icon: Trophy, color: "bg-yellow-400" },
-  { key: "women5v5", icon: Star, color: "bg-pink-400" },
-  { key: "youthBoys", icon: Shield, color: "bg-blue-400" },
-  { key: "youthGirls", icon: Sparkles, color: "bg-purple-400" },
-  { key: "clubLeague", icon: Users, color: "bg-orange-400" },
-  { key: "community", icon: Heart, color: "bg-green-400" },
+const tournaments = [
+  { key: "international", image: "/images/gallery/scrimmage.jpg" },
+  { key: "local", image: "/images/gallery/outdoor-action.jpg" },
+  { key: "community", image: "/images/gallery/community-event.jpg" },
+  { key: "invitational", image: "/images/gallery/huddle.jpg" },
+] as const;
+
+const events2025 = [
+  { key: "abuDhabi", icon: MapPin, month: "monthApr" },
+  { key: "barcelona", icon: MapPin, month: "monthJun" },
+  { key: "summerLeague", icon: Sun, month: "monthSummer" },
+  { key: "kaust", icon: GraduationCap, month: "monthEndSummer" },
+  { key: "dubai", icon: Calendar, month: "monthDec" },
 ] as const;
 
 export default function Tournaments() {
@@ -30,14 +36,42 @@ export default function Tournaments() {
           <p className="text-white/70 max-w-2xl mb-12 leading-relaxed">{t("description")}</p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {tournamentIcons.map(({ key, icon: Icon, color }) => (
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {tournaments.map(({ key, image }) => (
             <StaggerItem key={key}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition-all cursor-pointer group">
-                <div className={`w-14 h-14 ${color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
-                  <Icon className="size-7 text-white" />
+              <div className="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={image} alt={t(key)} className="w-full block" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6">
+                  <span className="text-base font-bold text-white">{t(key)}</span>
                 </div>
-                <span className="text-sm font-semibold text-white">{t(key)}</span>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
+        {/* 2025 Season Recap */}
+        <AnimatedSection variant="fadeInUp" delay={0.4}>
+          <div className="mt-16 pt-12 border-t border-white/10">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{t("season2025Title")}</h3>
+            <p className="text-white/70 max-w-3xl mb-10 leading-relaxed">{t("season2025Description")}</p>
+          </div>
+        </AnimatedSection>
+
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {events2025.map(({ key, icon: Icon, month }) => (
+            <StaggerItem key={key}>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/20 transition-all group">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="size-6 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-medium text-white/50 uppercase tracking-wider">{t(month)}</span>
+                    <h4 className="text-white font-semibold mt-1">{t(`events2025.${key}.title`)}</h4>
+                    <p className="text-white/60 text-sm mt-1">{t(`events2025.${key}.description`)}</p>
+                  </div>
+                </div>
               </div>
             </StaggerItem>
           ))}
