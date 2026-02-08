@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "about": "About",
+    "tournaments": "Tournaments",
+    "teams": "Teams",
+    "calendar": "Calendar",
+    "register": "Register",
+    "language": "AR"
+  },
+  "hero": {
+    "title": "KSA Flag Football Federation",
+    "subtitle": "Flag football is more than just a sport—it's a fast-growing, inclusive game that connects communities. As an official Olympic sport debuting at LA 2028, flag football is taking the world by storm. The KSA Flag Football Federation is dedicated to growing the game across the Kingdom, giving everyone the opportunity to play, compete, and be part of something extraordinary.",
+    "cta": "Try Flag Football"
+  },
+  "community": {
+    "title": "Join Our Community",
+    "description": "Join the KSA Flag Football Federation (KSAFF) and connect with a dynamic community dedicated to flag football excellence in Saudi Arabia. Whether you're a player, team manager, coach, referee, or fan, KSAFF provides a comprehensive platform for growth, competition, and active participation in the fastest-growing sport heading to the Olympics.",
+    "players": "Players",
+    "teams": "Teams & Clubs",
+    "referees": "Referees & Officials",
+    "coaches": "Coaches",
+    "medical": "Medical Staff",
+    "membership": "Standard Membership",
+    "cta": "About Us"
+  },
+  "teams": {
+    "title": "National Teams",
+    "men": "Men's National Team",
+    "women": "Women's National Team",
+    "youth": "Youth National Team",
+    "learnMore": "Learn More"
+  },
+  "tournaments": {
+    "title": "Tournaments",
+    "description": "KSAFF hosts tournaments for men, women, and youth, showcasing flag football talent across the Kingdom. These competitions build skills at every level and prepare athletes for regional and international events, including the road to the 2028 Olympics.",
+    "open5v5": "5v5 Open",
+    "women5v5": "5v5 Women's",
+    "youthBoys": "5v5 Youth Boys",
+    "youthGirls": "5v5 Youth Girls",
+    "clubLeague": "7v7 Club League",
+    "community": "Community Flag"
+  },
+  "everyBody": {
+    "title": "Every Body Counts",
+    "description": "Be part of Saudi Arabia's flag football journey! We are building a vibrant community that nurtures the sport from grassroots to elite levels, embracing inclusivity, fostering competitiveness, and developing world-class programs. Flag football is for everyone—no matter your age, gender, or experience level. Join us in growing the game across the Kingdom.",
+    "cta": "Register Now"
+  },
+  "blog": {
+    "title": "Latest News & Articles",
+    "readMore": "Read More",
+    "post1Title": "KSA Flag Football Stars Shine at IFAF Asia Championship",
+    "post1Excerpt": "The Saudi national flag football team delivered a stunning performance at the IFAF Asia Continental Championship, advancing to the semi-finals in a historic achievement.",
+    "post2Title": "Fanatics Flag Football Classic Coming to Riyadh",
+    "post2Excerpt": "Tom Brady headlines an all-star flag football tournament at Kingdom Arena in Riyadh on March 21, 2026, featuring NFL legends in a round-robin format.",
+    "post3Title": "Federation Board Announces 2026 Season Calendar",
+    "post3Excerpt": "The KSAFF Board has released the official 2026 competition calendar, featuring expanded leagues, new youth programs, and Olympic qualification events."
+  },
+  "footer": {
+    "tagline": "Follow us on our social platforms to stay updated with KSA Flag Football!",
+    "links": "Links",
+    "home": "Home",
+    "about": "About",
+    "tournaments": "Tournaments",
+    "teams": "Teams",
+    "calendar": "Calendar",
+    "legal": "Legal",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "contactUs": "Contact Us",
+    "email": "info@ksaff.sa",
+    "phone": "+966 11 XXX XXXX",
+    "address": "Riyadh, Saudi Arabia",
+    "copyright": "© 2026 KSA Flag Football Federation. All rights reserved."
+  }
+}
