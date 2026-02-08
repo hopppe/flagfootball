@@ -89,9 +89,9 @@ export default function Header() {
                 <Menu className="size-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side={locale === "ar" ? "left" : "right"} className="w-[280px] bg-white">
+            <SheetContent side={locale === "ar" ? "left" : "right"} className="w-[280px] bg-white p-6">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <div className="flex flex-col gap-6 mt-8">
+              <div className="flex flex-col gap-6 mt-4">
                 <Image src="/images/partners/ksaff.png" alt="KSAFF" width={44} height={44} className="rounded-full" />
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item) => {
