@@ -36,16 +36,16 @@ export default function TeamsPage() {
             <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">{t("clubDescription")}</p>
           </AnimatedSection>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
             {clubTeams.map(({ key, logo }) => (
-              <div key={key} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group text-center h-[200px] w-full flex flex-col items-center justify-center">
-                <div className="w-24 h-24 mx-auto mb-4 overflow-hidden flex items-center justify-center">
+              <div key={key} className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group text-center h-[180px] w-full flex flex-col items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-3 overflow-hidden flex items-center justify-center">
                   <img
                     src={logo}
                     alt={t(`clubs.${key}.name`)}
-                    width={80}
-                    height={80}
-                    style={{ maxWidth: 80, maxHeight: 80, width: "auto", height: "auto", objectFit: "contain" }}
+                    width={64}
+                    height={64}
+                    style={{ maxWidth: 64, maxHeight: 64, width: "auto", height: "auto", objectFit: "contain" }}
                     className="group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
