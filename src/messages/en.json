@@ -4,6 +4,7 @@
     "tournaments": "Tournaments",
     "teams": "Teams",
     "media": "Media",
+    "collaborators": "Partners",
     "calendar": "Calendar",
     "contact": "Contact",
     "language": "AR"
@@ -42,6 +43,7 @@
     "nationalTitle": "National Teams",
     "clubTitle": "Club Teams",
     "clubDescription": "Our club teams form the backbone of the KSAFF community, competing in local leagues and international tournaments across the region.",
+    "womensTeamDescription": "The first women's flag football team in Saudi Arabia — breaking barriers and pioneering the sport across the Kingdom.",
     "storiesTitle": "Team Highlights",
     "clubs": {
       "alBahara": { "name": "Al Bahara", "city": "Jeddah" },
@@ -52,7 +54,8 @@
       "jaws": { "name": "Jeddah Jaws", "city": "Jeddah" },
       "reapers": { "name": "Rush Reapers", "city": "Saudi Arabia" },
       "rebels": { "name": "Riyadh Rebels", "city": "Riyadh" },
-      "tigers": { "name": "Jeddah Tigers", "city": "Jeddah" }
+      "tigers": { "name": "Jeddah Tigers", "city": "Jeddah" },
+      "cheetahs": { "name": "Cheetahs", "city": "Saudi Arabia" }
     },
     "alBahara": {
       "name": "Al Bahara",
@@ -118,6 +121,9 @@
     "emailLabel": "Email us",
     "email": "flagfootball.ksa@gmail.com",
     "instagramLabel": "Follow us on Instagram",
+    "phoneLabel": "Call or WhatsApp",
+    "phone": "+966 55 417 0368",
+    "phoneName": "Ali",
     "practiceLabel": "Weekly practices",
     "practice": "Every week in Jeddah — all levels welcome",
     "close": "Got it!"
@@ -170,6 +176,32 @@
     "post2Excerpt": "Tom Brady headlines an all-star flag football tournament at Kingdom Arena in Riyadh on March 21, 2026, featuring NFL legends in a round-robin format.",
     "post3Title": "KSAFF Announces 2026 Season Calendar",
     "post3Excerpt": "KSAFF has released the official 2026 competition calendar, featuring expanded leagues and Olympic qualification events."
+  },
+  "womensTeam": {
+    "title": "Women's National Team",
+    "subtitle": "Pioneering women's flag football in Saudi Arabia",
+    "badge": "Making History",
+    "storyTitle": "The First Women's Flag Football Team in Saudi Arabia",
+    "storyP1": "The KSAFF Women's National Team represents a historic milestone — the first women's flag football team in Saudi Arabia. Breaking barriers and challenging expectations, these athletes are paving the way for women in sport across the Kingdom.",
+    "storyP2": "With dedication, skill, and an unwavering competitive spirit, the team is building a legacy that inspires the next generation of female athletes in Saudi Arabia and the region. Their journey is a testament to what's possible when passion meets opportunity.",
+    "galleryTitle": "In Action",
+    "sponsorLabel": "Proudly supported by"
+  },
+  "collaborators": {
+    "title": "Our Collaborators and Partners",
+    "description": "We are proud to work with organizations that share our vision of growing flag football across Saudi Arabia and beyond.",
+    "kaec": "King Abdullah Economic City",
+    "kaecDescription": "KAEC has been a key partner in supporting flag football events and providing world-class facilities for our tournaments and training camps.",
+    "teamup": "TeamUp Sports",
+    "teamupDescription": "TeamUp Sports collaborates with KSAFF to organize tournaments and grow the flag football community across the region.",
+    "bridgeway": "Bridgeway Sports",
+    "bridgewayDescription": "Bridgeway Sports partners with KSAFF to run our summer leagues in Riyadh and Jeddah, helping bring competitive flag football to more cities.",
+    "buffaloWingsRings": "Buffalo Wings & Rings",
+    "buffaloDescription": "Buffalo Wings & Rings supports KSAFF events and tournaments, fueling our athletes and community gatherings.",
+    "sportsForAll": "Sports for All",
+    "sportsForAllDescription": "The Sports for All Federation works with KSAFF to promote flag football as an inclusive, accessible sport for everyone in the Kingdom.",
+    "ambitious": "Ambitious",
+    "ambitiousDescription": "Ambitious partners with KSAFF to bring creative marketing and brand development to flag football in Saudi Arabia."
   },
   "footer": {
     "tagline": "Follow us on our social platforms to stay updated with KSA Flag Football!",

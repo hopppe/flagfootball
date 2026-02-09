@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -17,15 +19,49 @@ const clubTeams = [
   { key: "reapers", logo: "/images/teams/reapers.png" },
   { key: "rebels", logo: "/images/teams/rebels.png" },
   { key: "tigers", logo: "/images/teams/tigers.png" },
+  { key: "cheetahs", logo: "/images/teams/cheetahs.png" },
 ] as const;
 
 export default function TeamsPage() {
   const t = useTranslations("teamsPage");
+  const tTeams = useTranslations("teams");
+  const locale = useLocale();
 
   return (
     <main>
       <Header />
       <div className="pt-20" />
+
+      {/* Women's National Team */}
+      <section className="py-24 px-6">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedSection variant="fadeInUp">
+            <Link href={`/${locale}/womens-team`} className="block">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer bg-gradient-to-br from-[#1a6b2e] to-[#155724]">
+                <div className="absolute inset-0">
+                  <Image
+                    src="/images/team-women.jpg"
+                    alt={tTeams("women")}
+                    fill
+                    sizes="100vw"
+                    className="object-cover object-[center_80%] opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-500"
+                  />
+                </div>
+                <div className="relative z-10 p-8 md:p-12 min-h-[280px] flex flex-col justify-end">
+                  <span className="inline-block px-3 py-1 bg-white/10 text-white/80 text-xs font-bold uppercase tracking-wider rounded-full mb-3 w-fit">
+                    {t("nationalTitle")}
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{tTeams("women")}</h3>
+                  <p className="text-white/70 max-w-xl mb-4 text-sm leading-relaxed">{t("womensTeamDescription")}</p>
+                  <Button variant="outline" className="w-fit border-white/30 bg-transparent text-white hover:bg-white/10 rounded-full">
+                    {tTeams("learnMore")}
+                  </Button>
+                </div>
+              </div>
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* Club Teams */}
       <section className="py-24 px-6 bg-gray-50">
@@ -103,8 +139,8 @@ export default function TeamsPage() {
                 <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Trophy className="size-8" style={{ color: "#fde68a" }} />
+                    <div className="w-16 h-16 bg-white/10 rounded-xl p-2 flex-shrink-0 flex items-center justify-center">
+                      <Image src="/images/teams/cheetahs.png" alt="Cheetahs" width={48} height={48} className="object-contain" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold">{t("cheetahs.name")}</h3>

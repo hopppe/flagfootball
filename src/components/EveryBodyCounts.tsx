@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "./AnimatedSection";
-import { ChevronRight, X, Mail, Instagram, MapPin } from "lucide-react";
+import { ChevronRight, X, Mail, Instagram, MapPin, Phone } from "lucide-react";
 import { Dialog as DialogPrimitive } from "radix-ui";
 
 export default function EveryBodyCounts() {
@@ -68,6 +68,14 @@ export default function EveryBodyCounts() {
                 <div>
                   <p className="text-xs text-gray-500">{tc("emailLabel")}</p>
                   <p className="text-sm font-bold text-[#155724]">{tc("email")}</p>
+                </div>
+              </a>
+
+              <a href={`tel:${tc("phone")}`} className="flex items-center gap-3 p-4 bg-blue-50 rounded-xl border border-blue-100 hover:bg-blue-100 transition-colors">
+                <Phone className="size-5 text-blue-600 flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-gray-500">{tc("phoneLabel")}</p>
+                  <p className="text-sm font-bold text-blue-600">{tc("phoneName")} — {tc("phone")}</p>
                 </div>
               </a>
 

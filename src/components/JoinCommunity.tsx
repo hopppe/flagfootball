@@ -1,6 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSection";
 import { Check, ChevronRight } from "lucide-react";
@@ -9,6 +10,7 @@ const membershipKeys = ["players", "teams", "referees", "coaches", "medical", "m
 
 export default function JoinCommunity() {
   const t = useTranslations("community");
+  const locale = useLocale();
 
   return (
     <section id="about" className="py-24 px-6">
@@ -69,10 +71,12 @@ export default function JoinCommunity() {
             </StaggerContainer>
 
             <AnimatedSection variant="fadeIn" delay={0.4}>
-              <Button className="bg-[#155724] hover:bg-[#1a6b2e] text-white rounded-full px-8 gap-2">
-                <ChevronRight className="size-4" />
-                {t("cta")}
-              </Button>
+              <Link href={`/${locale}/about`}>
+                <Button className="bg-[#155724] hover:bg-[#1a6b2e] text-white rounded-full px-8 gap-2">
+                  <ChevronRight className="size-4" />
+                  {t("cta")}
+                </Button>
+              </Link>
             </AnimatedSection>
           </div>
         </div>

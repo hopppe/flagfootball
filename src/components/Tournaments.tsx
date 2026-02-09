@@ -1,6 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSection";
 import { MapPin, Calendar, Sun, GraduationCap } from "lucide-react";
 
@@ -21,6 +22,7 @@ const events2025 = [
 
 export default function Tournaments() {
   const t = useTranslations("tournaments");
+  const locale = useLocale();
 
   return (
     <section id="tournaments" className="py-24 px-6 bg-gradient-to-br from-[#0d3a17] via-[#155724] to-[#1a6b2e] relative overflow-hidden">
@@ -39,13 +41,15 @@ export default function Tournaments() {
         <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {tournaments.map(({ key, image }) => (
             <StaggerItem key={key}>
-              <div className="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={image} alt={t(key)} className="w-full block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6">
-                  <span className="text-base font-bold text-white">{t(key)}</span>
+              <Link href={`/${locale}/tournaments`}>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={image} alt={t(key)} className="w-full block" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6">
+                    <span className="text-base font-bold text-white">{t(key)}</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </StaggerItem>
           ))}
         </StaggerContainer>
@@ -61,18 +65,20 @@ export default function Tournaments() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {events2025.map(({ key, icon: Icon, month }) => (
             <StaggerItem key={key}>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/20 transition-all group">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                    <Icon className="size-6 text-white" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-medium text-white/50 uppercase tracking-wider">{t(month)}</span>
-                    <h4 className="text-white font-semibold mt-1">{t(`events2025.${key}.title`)}</h4>
-                    <p className="text-white/60 text-sm mt-1">{t(`events2025.${key}.description`)}</p>
+              <Link href={`/${locale}/tournaments`}>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/20 transition-all group">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <Icon className="size-6 text-white" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-medium text-white/50 uppercase tracking-wider">{t(month)}</span>
+                      <h4 className="text-white font-semibold mt-1">{t(`events2025.${key}.title`)}</h4>
+                      <p className="text-white/60 text-sm mt-1">{t(`events2025.${key}.description`)}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </StaggerItem>
           ))}
         </StaggerContainer>

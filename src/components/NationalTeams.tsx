@@ -32,7 +32,7 @@ export default function NationalTeams() {
                 </div>
                 <div className="relative z-10 p-8 md:p-10 min-h-[280px] flex flex-col justify-end">
                   <h3 className="text-2xl font-bold text-white mb-4">{t(key)}</h3>
-                  <Link href={`/${locale}/teams`}>
+                  <Link href={key === "women" ? `/${locale}/womens-team` : `/${locale}/teams`}>
                     <Button variant="outline" className="w-fit border-white/30 bg-transparent text-white hover:bg-white/10 rounded-full">
                       {t("learnMore")}
                     </Button>

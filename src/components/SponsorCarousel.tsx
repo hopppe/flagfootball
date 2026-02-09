@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const teams = [
+const logos = [
   { src: "/images/teams/ballhawks.png", alt: "Ball Hawks" },
   { src: "/images/teams/cobras.png", alt: "Dhahran Cobras" },
   { src: "/images/teams/eagles.png", alt: "Dammam Eagles" },
@@ -13,12 +13,10 @@ const teams = [
   { src: "/images/teams/hunters.png", alt: "Hunters" },
   { src: "/images/teams/tigers.png", alt: "Jeddah Tigers" },
   { src: "/images/teams/albaharah.png", alt: "Jeddah Al Baharah" },
-  { src: "/images/partners/bridgeway.png", alt: "Bridgeway Sports" },
-  { src: "/images/partners/teamup.png", alt: "TeamUp Sports" },
 ];
 
 export default function SponsorCarousel() {
-  const doubled = [...teams, ...teams, ...teams];
+  const doubled = [...logos, ...logos, ...logos];
   return (
     <section className="py-8 bg-gray-50 overflow-hidden border-y border-gray-100">
       <div className="relative">

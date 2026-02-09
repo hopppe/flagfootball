@@ -6,10 +6,10 @@ import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu, Globe, Mail, Instagram, MapPin, X } from "lucide-react";
+import { Menu, Globe, Mail, Instagram, MapPin, Phone, X } from "lucide-react";
 import { Dialog as DialogPrimitive } from "radix-ui";
 
-const navItems = ["about", "tournaments", "teams", "media", "calendar"] as const;
+const navItems = ["about", "tournaments", "teams", "collaborators", "media", "calendar"] as const;
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -47,7 +47,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
-            const isPage = ["about", "tournaments", "teams", "media"].includes(item);
+            const isPage = ["about", "tournaments", "teams", "collaborators", "media"].includes(item);
             return isPage ? (
               <Link
                 key={item}
@@ -95,7 +95,7 @@ export default function Header() {
                 <Image src="/images/partners/ksaff.png" alt="KSAFF" width={44} height={44} className="rounded-full" />
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item) => {
-                    const isPage = ["about", "tournaments", "teams", "media"].includes(item);
+                    const isPage = ["about", "tournaments", "teams", "collaborators", "media"].includes(item);
                     return isPage ? (
                       <Link
                         key={item}
@@ -164,6 +164,14 @@ export default function Header() {
                 <div>
                   <p className="text-xs text-gray-500">{tc("emailLabel")}</p>
                   <p className="text-sm font-bold text-[#155724]">{tc("email")}</p>
+                </div>
+              </a>
+
+              <a href={`tel:${tc("phone")}`} className="flex items-center gap-3 p-4 bg-blue-50 rounded-xl border border-blue-100 hover:bg-blue-100 transition-colors">
+                <Phone className="size-5 text-blue-600 flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-gray-500">{tc("phoneLabel")}</p>
+                  <p className="text-sm font-bold text-blue-600">{tc("phoneName")} — {tc("phone")}</p>
                 </div>
               </a>
 

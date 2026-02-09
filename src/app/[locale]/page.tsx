@@ -6,7 +6,6 @@ import NationalTeams from "@/components/NationalTeams";
 import Tournaments from "@/components/Tournaments";
 import YearCalendar from "@/components/YearCalendar";
 import EveryBodyCounts from "@/components/EveryBodyCounts";
-import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -20,7 +19,6 @@ export default function HomePage() {
       <Tournaments />
       <YearCalendar />
       <EveryBodyCounts />
-      <BlogSection />
       <Footer />
     </main>
   );
