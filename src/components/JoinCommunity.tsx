@@ -30,16 +30,16 @@ export default function JoinCommunity() {
               </div>
               <div className="relative z-10 flex gap-8 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-black text-[#86efac]">500+</div>
-                  <div className="text-xs text-white/50 mt-1">Players</div>
+                  <div className="text-3xl font-black text-[#86efac]">130+</div>
+                  <div className="text-xs text-white/50 mt-1">{t("statPlayers")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-black text-[#86efac]">24</div>
-                  <div className="text-xs text-white/50 mt-1">Teams</div>
+                  <div className="text-3xl font-black text-[#86efac]">14</div>
+                  <div className="text-xs text-white/50 mt-1">{t("statTeams")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-black text-[#86efac]">6</div>
-                  <div className="text-xs text-white/50 mt-1">Leagues</div>
+                  <div className="text-3xl font-black text-[#86efac]">3</div>
+                  <div className="text-xs text-white/50 mt-1">{t("statRegions")}</div>
                 </div>
               </div>
             </div>

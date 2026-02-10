@@ -9,17 +9,32 @@ import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { MapPin, Trophy } from "lucide-react";
 
-const clubTeams = [
-  { key: "alBahara", logo: "/images/teams/albaharah.png" },
-  { key: "ballhawks", logo: "/images/teams/ballhawks.png" },
-  { key: "cobras", logo: "/images/teams/cobras.png" },
-  { key: "eagles", logo: "/images/teams/eagles.png" },
-  { key: "hunters", logo: "/images/teams/hunters.png" },
-  { key: "jaws", logo: "/images/teams/jaws.png" },
-  { key: "reapers", logo: "/images/teams/reapers.png" },
-  { key: "rebels", logo: "/images/teams/rebels.png" },
-  { key: "tigers", logo: "/images/teams/tigers.png" },
-  { key: "cheetahs", logo: "/images/teams/cheetahs.png" },
+const teamsByRegion = [
+  {
+    regionKey: "western",
+    teams: [
+      { key: "alBahara", logo: "/images/teams/albaharah.png" },
+      { key: "jaws", logo: "/images/teams/jaws.png" },
+      { key: "tigers", logo: "/images/teams/tigers.png" },
+      { key: "hunters", logo: "/images/teams/hunters.png" },
+      { key: "ballhawks", logo: "/images/teams/ballhawks.png" },
+    ],
+  },
+  {
+    regionKey: "central",
+    teams: [
+      { key: "reapers", logo: "/images/teams/reapers.png" },
+      { key: "cheetahs", logo: "/images/teams/cheetahs.png" },
+    ],
+  },
+  {
+    regionKey: "eastern",
+    teams: [
+      { key: "eagles", logo: "/images/teams/eagles.png" },
+      { key: "cobras", logo: "/images/teams/cobras.png" },
+      { key: "rebels", logo: "/images/teams/rebels.png" },
+    ],
+  },
 ] as const;
 
 export default function TeamsPage() {
@@ -63,7 +78,7 @@ export default function TeamsPage() {
         </div>
       </section>
 
-      {/* Club Teams */}
+      {/* Club Teams by Region */}
       <section className="py-24 px-6 bg-gray-50">
         <div className="mx-auto max-w-7xl">
           <AnimatedSection variant="fadeInUp">
@@ -72,21 +87,31 @@ export default function TeamsPage() {
             <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">{t("clubDescription")}</p>
           </AnimatedSection>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
-            {clubTeams.map(({ key, logo }) => (
-              <div key={key} className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group text-center h-[180px] w-full flex flex-col items-center justify-center">
-                <div className="w-20 h-20 mx-auto mb-3 overflow-hidden flex items-center justify-center">
-                  <img
-                    src={logo}
-                    alt={t(`clubs.${key}.name`)}
-                    width={64}
-                    height={64}
-                    style={{ maxWidth: 64, maxHeight: 64, width: "auto", height: "auto", objectFit: "contain" }}
-                    className="group-hover:scale-110 transition-transform duration-300"
-                  />
+          <div className="space-y-24">
+            {teamsByRegion.map(({ regionKey, teams }) => (
+              <div key={regionKey}>
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#155724]" />
+                  {t(`region.${regionKey}`)}
+                </h3>
+                <div className="mb-8" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
+                  {teams.map(({ key, logo }) => (
+                    <div key={key} className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group text-center h-[180px] w-full flex flex-col items-center justify-center">
+                      <div className="w-20 h-20 mx-auto mb-3 overflow-hidden flex items-center justify-center">
+                        <img
+                          src={logo}
+                          alt={t(`clubs.${key}.name`)}
+                          width={64}
+                          height={64}
+                          style={{ maxWidth: 64, maxHeight: 64, width: "auto", height: "auto", objectFit: "contain" }}
+                          className="group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <h3 className="font-bold text-gray-900 text-sm">{t(`clubs.${key}.name`)}</h3>
+                      <p className="text-xs text-gray-500 mt-1">{t(`clubs.${key}.city`)}</p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm">{t(`clubs.${key}.name`)}</h3>
-                <p className="text-xs text-gray-500 mt-1">{t(`clubs.${key}.city`)}</p>
               </div>
             ))}
           </div>

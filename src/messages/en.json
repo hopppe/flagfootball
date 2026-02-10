@@ -29,7 +29,10 @@
     "coaches": "Coaches",
     "medical": "Medical Staff",
     "membership": "Standard Membership",
-    "cta": "About Us"
+    "cta": "About Us",
+    "statPlayers": "Players",
+    "statTeams": "Teams",
+    "statRegions": "Regions"
   },
   "teams": {
     "title": "Our Teams",
@@ -43,6 +46,11 @@
     "nationalTitle": "National Teams",
     "clubTitle": "Club Teams",
     "clubDescription": "Our club teams form the backbone of the KSAFF community, competing in local leagues and international tournaments across the region.",
+    "region": {
+      "western": "Western Region — Jeddah",
+      "central": "Central Region — Riyadh",
+      "eastern": "Eastern Region — Dammam & Dhahran"
+    },
     "womensTeamDescription": "The first women's flag football team in Saudi Arabia — breaking barriers and pioneering the sport across the Kingdom.",
     "storiesTitle": "Team Highlights",
     "clubs": {
@@ -103,6 +111,84 @@
       "dubai": {
         "title": "Dubai Tournament",
         "description": "Wrapping up 2025 with a year-end tournament in Dubai."
+      }
+    }
+  },
+  "about": {
+    "title": "About KSA Flag Football",
+    "introP1": "Flag football is a non-contact, 5-on-5 variation of American football where the defensive team must pull a flag from the ball carrier's belt to end the play. It's fast, strategic, and accessible — open to men and women of all ages and athletic backgrounds. With its inclusion as an official sport in the 2028 Olympic Games in Los Angeles, flag football is one of the fastest-growing sports in the world.",
+    "introP2": "KSA Flag Football (KSAFF) has grown into a community of over 130 players across 14 teams in 3 regions — the Western Region (Jeddah, ~60 players across 6 teams), the Central Region (Riyadh, ~50 players across 6 teams), and the Eastern Region (Dammam & Dhahran, ~20 players across 2 teams). Our players range from ages 16 to 45+ and represent over 10 nationalities, making KSAFF one of the most diverse sporting communities in the Kingdom.",
+    "introP3": "From weekly practices and local leagues to international tournaments in Abu Dhabi, Barcelona, Cairo, and Dubai, KSAFF is building a complete flag football ecosystem — including the first women's team in Saudi Arabia, established in 2025 in collaboration with TeamUp Academy.",
+    "numbersTitle": "Our Community in Numbers",
+    "statPlayers": "Players",
+    "statTeams": "Teams",
+    "statRegions": "Regions",
+    "statYears": "Years",
+    "ofCommunity": "of community",
+    "region": {
+      "western": "Western Region",
+      "central": "Central Region",
+      "eastern": "Eastern Region"
+    },
+    "highlight1": "A fast-paced, team-based 5v5 format played on a smaller field — designed for speed, agility, and strategy.",
+    "highlight2": "Emphasizes skill and tactical intelligence over physical size, making it accessible to a wide range of athletes.",
+    "highlight3": "One of the fastest-growing sports globally, now an official Olympic sport debuting at the 2028 Los Angeles Games.",
+    "highlight4": "An inclusive, non-contact sport open to all ages and genders — perfect for grassroots development.",
+    "highlight5": "Rapidly expanding across the Middle East and Saudi Arabia, with KSAFF leading the charge in the Kingdom.",
+    "olympicsTitle": "Road to the 2028 Olympics",
+    "olympicsDescription": "Flag football will make its Olympic debut at the 2028 Los Angeles Games. KSAFF is preparing Saudi athletes to compete at the highest level, with a clear roadmap for national team development and international qualification.",
+    "obj1": "Achieve official recognition from the Saudi Arabian Olympic Committee and establish KSAFF as the national governing body for flag football.",
+    "obj2": "Build an integrated ecosystem of leagues, coaching programs, and referee development to raise the level of competition across the Kingdom.",
+    "obj3": "Secure full membership in IFAF (International Federation of American Football) and participate in continental and world championship events.",
+    "growthTitle": "Flag Football Growth in KSA",
+    "journeyTitle": "Our Journey",
+    "journeyOverview": "What started in 2012 with a single American football team in Jeddah has grown into a nationwide movement. Over more than a decade, KSAFF has expanded from local pickup games to organized leagues, international tournaments, and the first women's team in the Kingdom — all building toward the 2028 Olympic Games.",
+    "journey": {
+      "j2012": "Establishing the first American Football team in KSA — the Jeddah Jaws.",
+      "j2013": "Jeddah Jaws competing in the first American Football game in Kuwait.",
+      "j2014": "Organizing the first Flag Football tournament in Jeddah, KSA.",
+      "j2016": "Representing Saudi Arabia in the IFAF Flag Football Asian Cup in Vietnam.",
+      "j2019": "Organizing the first annual Ramadan Flag Football tournament in Jeddah, KSA.",
+      "j2023": "Participating in the Xflag Tournament in Dubai, UAE.",
+      "j2024a": "Participating in the Oasis Flag Football Cup in Abu Dhabi, UAE.",
+      "j2024b": "Participating in the Play Flag Football UAE tournament in Dubai, UAE.",
+      "j2024c": "Establishing the first Saudi Flag Football League with 8 teams between Jeddah, KAEC, KAUST, and Riyadh.",
+      "j2025a": "Participating in the ANFC Flag Football Cup in Cairo, Egypt.",
+      "j2025b": "Establishing the first Women's Flag Football team in Jeddah, KSA.",
+      "j2025c": "First place in the Masters World Bowl tournament in Barcelona, Spain.",
+      "j2025d": "Participating in the Dubai Bowl Tournament in Dubai, UAE."
+    }
+  },
+  "tournamentsPage": {
+    "achievementsTitle": "Tournaments & Achievements",
+    "achievementsDescription": "A track record of competing on the regional and international stage — bringing Saudi flag football talent to the world.",
+    "achievements": {
+      "barcelona": {
+        "title": "Masters World Bowl — Barcelona, Spain",
+        "date": "June 2025",
+        "description": "KSAFF competed in the Masters World Bowl in Barcelona, taking home the championship title in a historic first-place finish on the international stage.",
+        "result": "First Place"
+      },
+      "oasis": {
+        "title": "Oasis Cup — Abu Dhabi, UAE",
+        "date": "April 2024",
+        "description": "KSAFF teams competed in the Oasis Flag Football Cup in Abu Dhabi, earning a third-place finish against regional competition.",
+        "result": "Third Place"
+      },
+      "bridgeway": {
+        "title": "Bridgeway Flag Football League",
+        "date": "Jeddah & Riyadh, August 2025",
+        "description": "A competitive league organized in partnership with Bridgeway Sports, spanning Jeddah and Riyadh with multiple teams from across the Kingdom."
+      },
+      "ramadan": {
+        "title": "Annual Ramadan Tournament",
+        "date": "Jeddah, 2022–2025",
+        "description": "An annual tradition bringing the flag football community together during Ramadan in Jeddah, running consecutively since 2022."
+      },
+      "womensTeam": {
+        "title": "First Women's Team in KSA",
+        "date": "Jeddah, 2025",
+        "description": "Establishing the first women's flag football team in the Kingdom, in collaboration with TeamUp Academy — a landmark moment for the sport in Saudi Arabia."
       }
     }
   },
