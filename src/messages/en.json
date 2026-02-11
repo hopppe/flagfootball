@@ -55,15 +55,15 @@
     "storiesTitle": "Team Highlights",
     "clubs": {
       "alBahara": { "name": "Al Bahara", "city": "Jeddah" },
-      "ballhawks": { "name": "Ball Hawks", "city": "Saudi Arabia" },
+      "ballhawks": { "name": "Ball Hawks", "city": "Riyadh" },
       "cobras": { "name": "Dhahran Cobras", "city": "Dhahran" },
       "eagles": { "name": "Dammam Eagles", "city": "Dammam" },
-      "hunters": { "name": "Hunters", "city": "Saudi Arabia" },
+      "hunters": { "name": "Hunters", "city": "Jeddah" },
       "jaws": { "name": "Jeddah Jaws", "city": "Jeddah" },
-      "reapers": { "name": "Rush Reapers", "city": "Saudi Arabia" },
+      "reapers": { "name": "Rush Reapers", "city": "Riyadh" },
       "rebels": { "name": "Riyadh Rebels", "city": "Riyadh" },
       "tigers": { "name": "Jeddah Tigers", "city": "Jeddah" },
-      "cheetahs": { "name": "Cheetahs", "city": "Saudi Arabia" }
+      "cheetahs": { "name": "Cheetahs", "city": "Riyadh" }
     },
     "alBahara": {
       "name": "Al Bahara",

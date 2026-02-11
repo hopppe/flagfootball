@@ -17,7 +17,6 @@ const teamsByRegion = [
       { key: "jaws", logo: "/images/teams/jaws.png" },
       { key: "tigers", logo: "/images/teams/tigers.png" },
       { key: "hunters", logo: "/images/teams/hunters.png" },
-      { key: "ballhawks", logo: "/images/teams/ballhawks.png" },
     ],
   },
   {
@@ -25,6 +24,8 @@ const teamsByRegion = [
     teams: [
       { key: "reapers", logo: "/images/teams/reapers.png" },
       { key: "cheetahs", logo: "/images/teams/cheetahs.png" },
+      { key: "ballhawks", logo: "/images/teams/ballhawks.png" },
+      { key: "rebels", logo: "/images/teams/rebels.png" },
     ],
   },
   {
@@ -32,7 +33,6 @@ const teamsByRegion = [
     teams: [
       { key: "eagles", logo: "/images/teams/eagles.png" },
       { key: "cobras", logo: "/images/teams/cobras.png" },
-      { key: "rebels", logo: "/images/teams/rebels.png" },
     ],
   },
 ] as const;

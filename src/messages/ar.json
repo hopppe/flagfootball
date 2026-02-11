@@ -55,15 +55,15 @@
     "storiesTitle": "أبرز إنجازات الفرق",
     "clubs": {
       "alBahara": { "name": "البحارة", "city": "جدة" },
-      "ballhawks": { "name": "بول هوكس", "city": "السعودية" },
+      "ballhawks": { "name": "بول هوكس", "city": "الرياض" },
       "cobras": { "name": "كوبراز الظهران", "city": "الظهران" },
       "eagles": { "name": "نسور الدمام", "city": "الدمام" },
-      "hunters": { "name": "هانترز", "city": "السعودية" },
+      "hunters": { "name": "هانترز", "city": "جدة" },
       "jaws": { "name": "جوز جدة", "city": "جدة" },
-      "reapers": { "name": "رش ريبرز", "city": "السعودية" },
+      "reapers": { "name": "رش ريبرز", "city": "الرياض" },
       "rebels": { "name": "ريبلز الرياض", "city": "الرياض" },
       "tigers": { "name": "نمور جدة", "city": "جدة" },
-      "cheetahs": { "name": "الفهود", "city": "السعودية" }
+      "cheetahs": { "name": "الفهود", "city": "الرياض" }
     },
     "alBahara": {
       "name": "البحارة",
