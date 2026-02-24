@@ -49,6 +49,32 @@ export default function WomensTeamPage() {
         </div>
       </section>
 
+      {/* Team Photos */}
+      <section className="py-24 px-6 bg-gray-50">
+        <div className="mx-auto max-w-5xl">
+          <AnimatedSection variant="fadeInUp">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/gallery/girls-team-1.jpeg"
+                  alt="Girls flag football team"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/gallery/girls-team-2.jpeg"
+                  alt="Girls flag football team"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Team Up Sponsor */}
       <section className="py-24 px-6 bg-gray-50">
         <div className="mx-auto max-w-4xl text-center">

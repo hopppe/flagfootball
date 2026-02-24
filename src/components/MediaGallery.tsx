@@ -37,6 +37,8 @@ const galleryImages = [
   { src: "/images/gallery/DSC00617.jpg", alt: "Player spotlight" },
   { src: "/images/gallery/DSC09579.jpg", alt: "Season highlights" },
   { src: "/images/gallery/DSC09613.jpg", alt: "Team action" },
+  { src: "/images/gallery/girls-team-1.jpeg", alt: "Girls flag football team" },
+  { src: "/images/gallery/girls-team-2.jpeg", alt: "Girls flag football team" },
 ];
 
 export default function MediaGallery() {
